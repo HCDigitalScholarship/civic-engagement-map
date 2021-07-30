@@ -1,0 +1,43 @@
+{
+  "results":[
+    {
+      "id":0,
+      "text":"fellowship"
+    },
+    {
+      "id":1,
+      "text":"internship"
+    },
+    {
+      "id":2,
+      "text":"partner"
+    },
+    {
+      "id":3,
+      "text":"research"
+    },
+    {
+      "id":4,
+      "text":"conferences"
+    },
+    {
+      "id":5,
+      "text":"post-bac fellowship"
+    },
+    {
+      "id":6,
+      "text":"workshop"
+    },
+    {
+      "id":7,
+      "text":"residency"
+    },
+    {
+      "id":8,
+      "text":"volunteer"
+    }
+  ],
+  "pagination":{
+    "more":"false"
+  }
+}
