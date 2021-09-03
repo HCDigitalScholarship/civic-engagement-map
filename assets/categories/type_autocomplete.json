@@ -2,23 +2,23 @@
   "results":[
     {
       "id":0,
-      "text":"fellowship"
+      "text":"conferences"
     },
     {
       "id":1,
-      "text":"internship"
+      "text":"workshop"
     },
     {
       "id":2,
-      "text":"partner"
+      "text":"fellowship"
     },
     {
       "id":3,
-      "text":"research"
+      "text":"volunteer"
     },
     {
       "id":4,
-      "text":"conferences"
+      "text":"internship"
     },
     {
       "id":5,
@@ -26,7 +26,7 @@
     },
     {
       "id":6,
-      "text":"workshop"
+      "text":"research"
     },
     {
       "id":7,
@@ -34,7 +34,7 @@
     },
     {
       "id":8,
-      "text":"volunteer"
+      "text":"partner"
     }
   ],
   "pagination":{

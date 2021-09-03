@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from PIL import Image
 from typing import List, Dict, Optional
 import datetime
-from functools import cache
+#from functools import cache
 
 
 class Category(BaseModel):
@@ -37,7 +37,7 @@ class Item(BaseModel):
     geo_json: Optional[dict]
 
 
-@cache
+#@cache
 def load_data():
     """
     1. Reads the site.yml file to create a site_data dict.
