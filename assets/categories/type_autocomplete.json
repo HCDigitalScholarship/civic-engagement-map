@@ -6,7 +6,7 @@
     },
     {
       "id":1,
-      "text":"internship"
+      "text":"conferences"
     },
     {
       "id":2,
@@ -14,11 +14,11 @@
     },
     {
       "id":3,
-      "text":"research"
+      "text":"residency"
     },
     {
       "id":4,
-      "text":"conferences"
+      "text":"internship"
     },
     {
       "id":5,
@@ -26,11 +26,11 @@
     },
     {
       "id":6,
-      "text":"workshop"
+      "text":"research"
     },
     {
       "id":7,
-      "text":"residency"
+      "text":"workshop"
     },
     {
       "id":8,

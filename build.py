@@ -1,5 +1,5 @@
 from fastapi import Request
-from main import root, item_page
+from main import root, item_page, philly
 import shutil
 from pathlib import Path
 from utils.load_data import load_data
@@ -9,6 +9,9 @@ def build_index():
     page = root(Request)
     (site_path / "index.html").write_bytes(page.body)
 
+def build_philly():
+    page = philly(Request)
+    (site_path / "philly.html").write_bytes(page.body)
 
 def build_items():
     items, site_data = load_data()

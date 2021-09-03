@@ -45,6 +45,15 @@ def root(request: Request,):
 
     return templates.TemplateResponse("index.html", context)
 
+@app.get("/philly")
+def philly(request: Request,):
+    context = {}
+    items, site_data = load_data()
+    context["items"] = items
+    context["site_data"] = site_data
+    context["request"] = request
+
+    return templates.TemplateResponse("philly.html", context)
 
 @app.get("/item/{slug}")
 def item_page(request: Request, slug: str):
