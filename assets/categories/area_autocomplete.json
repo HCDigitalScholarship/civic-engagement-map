@@ -77,6 +77,14 @@
       "text":"Justice and Prisons"
     },
     {
+      "id":17,
+      "text":"Children"
+    },
+    {
+      "id":18,
+      "text":"Community Development"
+    },
+    {
       "id":19,
       "text":"Intercultural Issues"
     },
@@ -113,8 +121,36 @@
       "text":"Literacy"
     },
     {
+      "id":21,
+      "text":"Micro-Finance"
+    },
+    {
+      "id":22,
+      "text":"Healthcare"
+    },
+    {
+      "id":23,
+      "text":"Intercultural Issues"
+    },
+    {
+      "id":24,
+      "text":"Conflict Resolution"
+    },
+    {
+      "id":25,
+      "text":"Quaker Studies"
+    },
+    {
+      "id":26,
+      "text":"Immigration"
+    },
+    {
+      "id":27,
+      "text":"Hunger"
+    },
+    {
       "id":28,
-      "text":"Racism"
+      "text":"Urban and Rural Development"
     },
     {
       "id":29,

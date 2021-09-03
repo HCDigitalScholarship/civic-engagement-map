@@ -1,4 +1,4 @@
-name: null 
+name: Civic Engagement Map 
 author: CPGC 
 title: Civic Engagement Map
 about: Welcome to the Haverford College Civic Engagement Map! Here you will find organizations that we have worked with that offer possibilities for engagement through volunteer opportunities, internships, collaborative projects and more. Please reach out to the listed contact person before contacting the organization. Do you have an organization you've worked with that should be on the map? <a href="https://forms.haverford.edu/view.php?id=592618">Complete this form!</a> Questions or concerns? Email <a href="mailto:ejohnson3@haverford.edu">Emily Johnson</a>
@@ -10,3 +10,7 @@ base_layer: Esri.WorldStreetMap
 initial_lat: 27.757638179719486
 initial_long: -15.290770199349694
 initial_zoom: 3
+philly_lat: 39.96236017842848
+philly_long: -75.23350356612961
+philly_zoom: 12
+
