@@ -37,4 +37,5 @@ if __name__ == "__main__":
         (site_path / "item").mkdir(parents=True, exist_ok=True)
 
     build_index()
+    build_philly()
     build_items()

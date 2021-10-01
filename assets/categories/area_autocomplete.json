@@ -2,195 +2,159 @@
   "results":[
     {
       "id":0,
-      "text":"Human Rights"
-    },
-    {
-      "id":1,
-      "text":"Mental Health"
-    },
-    {
-      "id":2,
-      "text":"Disability Accessibility"
-    },
-    {
-      "id":3,
-      "text":"Public Policy"
-    },
-    {
-      "id":4,
-      "text":"Immigration"
-    },
-    {
-      "id":5,
-      "text":"Sustainability"
-    },
-    {
-      "id":6,
-      "text":"Conflict Resolution"
-    },
-    {
-      "id":7,
-      "text":"Micro-Finance"
-    },
-    {
-      "id":8,
-      "text":"Religion Interfaith"
-    },
-    {
-      "id":9,
-      "text":"Children"
-    },
-    {
-      "id":10,
       "text":"Economic Development"
     },
     {
-      "id":11,
-      "text":"Law"
+      "id":1,
+      "text":"Racism"
     },
     {
-      "id":12,
-      "text":"Language training"
+      "id":2,
+      "text":"Quaker Studies"
     },
     {
-      "id":13,
-      "text":"Hunger"
-    },
-    {
-      "id":14,
-      "text":"Civil Rights"
-    },
-    {
-      "id":15,
+      "id":3,
       "text":"Education"
     },
     {
-      "id":16,
-      "text":"Housing & Homelessness"
-    },
-    {
-      "id":17,
-      "text":"Environment"
-    },
-    {
-      "id":18,
-      "text":"Justice and Prisons"
-    },
-    {
-      "id":17,
-      "text":"Children"
-    },
-    {
-      "id":18,
-      "text":"Community Development"
-    },
-    {
-      "id":19,
-      "text":"Intercultural Issues"
-    },
-    {
-      "id":20,
-      "text":"Community Development"
-    },
-    {
-      "id":21,
-      "text":"Globalization"
-    },
-    {
-      "id":22,
-      "text":"Government"
-    },
-    {
-      "id":23,
-      "text":"Cooperative Solidarity Economy"
-    },
-    {
-      "id":24,
-      "text":"Other"
-    },
-    {
-      "id":25,
-      "text":"Urban and Rural Development"
-    },
-    {
-      "id":26,
-      "text":"Research"
-    },
-    {
-      "id":27,
-      "text":"Literacy"
-    },
-    {
-      "id":21,
+      "id":4,
       "text":"Micro-Finance"
     },
     {
-      "id":22,
-      "text":"Healthcare"
+      "id":5,
+      "text":"Children"
     },
     {
-      "id":23,
-      "text":"Intercultural Issues"
-    },
-    {
-      "id":24,
-      "text":"Conflict Resolution"
-    },
-    {
-      "id":25,
-      "text":"Quaker Studies"
-    },
-    {
-      "id":26,
-      "text":"Immigration"
-    },
-    {
-      "id":27,
-      "text":"Hunger"
-    },
-    {
-      "id":28,
+      "id":6,
       "text":"Urban and Rural Development"
     },
     {
-      "id":29,
-      "text":"Voting and politics"
+      "id":7,
+      "text":"Law"
     },
     {
-      "id":30,
-      "text":"Technology"
+      "id":8,
+      "text":"Justice and Prisons"
     },
     {
-      "id":31,
-      "text":"Agriculture"
+      "id":9,
+      "text":"Healthcare"
     },
     {
-      "id":32,
+      "id":10,
+      "text":"Civil Rights"
+    },
+    {
+      "id":11,
       "text":"Gender & Sexuality"
     },
     {
-      "id":33,
+      "id":12,
+      "text":"Globalization"
+    },
+    {
+      "id":13,
+      "text":"Public Policy"
+    },
+    {
+      "id":14,
       "text":"Poverty"
     },
     {
-      "id":34,
-      "text":"Seniors Elders"
+      "id":15,
+      "text":"Technology"
     },
     {
-      "id":35,
-      "text":"Quaker Studies"
+      "id":16,
+      "text":"Cooperative Solidarity Economy"
     },
     {
-      "id":36,
-      "text":"Arts & Culture"
+      "id":17,
+      "text":"Housing & Homelessness"
     },
     {
-      "id":37,
+      "id":18,
       "text":"HIV/AIDS"
     },
     {
+      "id":19,
+      "text":"Community Development"
+    },
+    {
+      "id":20,
+      "text":"Research"
+    },
+    {
+      "id":21,
+      "text":"Government"
+    },
+    {
+      "id":22,
+      "text":"Religion Interfaith"
+    },
+    {
+      "id":23,
+      "text":"Seniors Elders"
+    },
+    {
+      "id":24,
+      "text":"Disability Accessibility"
+    },
+    {
+      "id":25,
+      "text":"Hunger"
+    },
+    {
+      "id":26,
+      "text":"Agriculture"
+    },
+    {
+      "id":27,
+      "text":"Other"
+    },
+    {
+      "id":28,
+      "text":"Environment"
+    },
+    {
+      "id":29,
+      "text":"Arts & Culture"
+    },
+    {
+      "id":30,
+      "text":"Voting and politics"
+    },
+    {
+      "id":31,
+      "text":"Human Rights"
+    },
+    {
+      "id":32,
+      "text":"Mental Health"
+    },
+    {
+      "id":33,
+      "text":"Conflict Resolution"
+    },
+    {
+      "id":34,
+      "text":"Immigration"
+    },
+    {
+      "id":35,
+      "text":"Language training"
+    },
+    {
+      "id":36,
+      "text":"Literacy"
+    },
+    {
+      "id":37,
+      "text":"Intercultural Issues"
+    },
+    {
       "id":38,
-      "text":"Healthcare"
+      "text":"Sustainability"
     }
   ],
   "pagination":{
