@@ -1,11 +1,12 @@
-{% extends 'base.html' %} {% block site_title%}{{ site_data['name'] }}{%
-endblock %} {% block title%}{{ site_data['name'] }}{% endblock %} {% block logo
-%}{{ site_data['logo'] }}{% endblock %} {% block content %}
+{% extends 'base.html' %} {% block site_title%}{{ site_data['name'] }}{% endblock %} 
+{% block title%}{{ site_data['name'] }}{% endblock %} 
+{% block logo %}{{ site_data['logo'] }}{% endblock %} 
+{% block content %}
 <!-- ======= Contact Section ======= -->
 <section id="contact" class="contact">
   <div class="container" data-aos="fade-up">
     <header class="section-header">
-      <h2>Add or Edit Item</h2>
+      <h2>Edit Item</h2>
     </header>
 
     <div class="row gy-4">
@@ -15,7 +16,14 @@ endblock %} {% block title%}{{ site_data['name'] }}{% endblock %} {% block logo
           >Next</a
         >
         <form
+        
           action="../edit_item/{{ item['slug'] }}"
+        
+        
+          method="POST"
+          enctype="multipart/form-data"
+
+      
           method="post"
           enctype="multipart/form-data"
           class="php-email-form"
@@ -24,7 +32,9 @@ endblock %} {% block title%}{{ site_data['name'] }}{% endblock %} {% block logo
             <div class="col-md-12">
               <div id="map" style="height: 600px">This is the map</div>
             </div>
-
+            {% if item.id %} 
+            <strong>Item {{ item.id }}</strong>
+            {% endif %}
             <div class="col-md-12">
               <label for="name" class="form-label">Name</label>
               <input
@@ -141,7 +151,6 @@ endblock %} {% block title%}{{ site_data['name'] }}{% endblock %} {% block logo
               >
             </div>
 
-            <!-- TODO How to load existing s2 values? -->
             <div class="col-md-12">
               <label for="type" class="form-label">Type</label>
               <select
@@ -241,11 +250,20 @@ endblock %} {% block title%}{{ site_data['name'] }}{% endblock %} {% block logo
             </div>
             <div class="col-md-6">
               <label for="end_date" class="form-label">Start Date</label>
-              <input type="date" class="form-control" name="start_date" />
+              <input type="date" class="form-control" name="start_date"
+              {% if item.start_date %}
+              value="{{ item.start_date }}"
+              
+              {% endif %}
+              />
             </div>
             <div class="col-md-6">
               <label for="end_date" class="form-label">End Date</label>
-              <input type="date" class="form-control" name="end_date" />
+              <input type="date" class="form-control" name="end_date"
+              {% if item.end_date %}
+              value="{{ item.end_date }}"
+              
+              {% endif %} />
             </div>
             <div class="col-md-6">
               <label for="publish" class="form-label">Publish</label>
@@ -270,6 +288,20 @@ endblock %} {% block title%}{{ site_data['name'] }}{% endblock %} {% block logo
                 endif
                 %}
               />
+              <input
+                id="item_id"
+                type="hidden"
+                name="item_id"
+                {%
+                if
+                item.id
+                
+                %}
+                value="{{ item.id }}"
+                {%
+                endif
+                %}
+              />
             </div>
             <div class="col-md-12 text-center">
               <div class="loading">Loading</div>
@@ -290,7 +322,7 @@ endblock %} {% block title%}{{ site_data['name'] }}{% endblock %} {% block logo
               <input type="hidden" name="subject" id="subject" value="" />
               <input type="hidden" name="keyword" id="keyword" value="" />
 
-              <button type="submit">Send Message</button>
+              <button type="submit">Save</button>
             </div>
           </div>
         </form>
@@ -303,7 +335,8 @@ endblock %} {% block title%}{{ site_data['name'] }}{% endblock %} {% block logo
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"
   ><i class="bi bi-arrow-up-short"></i
 ></a>
-{% endblock %} {% block extrajs %}
+{% endblock %} 
+{% block extrajs %}
 <!-- Load Esri Leaflet from CDN -->
 <script
   src="https://unpkg.com/esri-leaflet@2.4.1/dist/esri-leaflet.js"

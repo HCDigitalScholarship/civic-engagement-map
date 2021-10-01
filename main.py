@@ -7,7 +7,7 @@ from fastapi import FastAPI, Request, Form, Depends, UploadFile, File
 from fastapi.templating import Jinja2Templates
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from fastapi.staticfiles import StaticFiles
-
+import datetime
 from utils.login import get_current_username
 from utils.load_data import load_data, Item, select2_ids
 from routers import add_items
@@ -83,6 +83,9 @@ async def new_item_form(request: Request, slug: str = None):
         else:
             prev = items[-1].slug
 
+    else: 
+        next = items[0].slug
+        prev = items[-1].slug
     context["next"] = next
     context["prev"] = prev
     context["site_data"] = site_data
@@ -92,6 +95,112 @@ async def new_item_form(request: Request, slug: str = None):
 
 @app.post("/edit_item/")
 @app.post("/edit_item/{slug}")
+async def edit_item_post(
+    request: Request,
+    slug: str = None,
+    item_id: str = Form(...),
+    name: str = Form(...),
+    lat: float = Form(...),
+    long: float = Form(...),
+    image_file: UploadFile = File(None),
+    organization: str = Form(None),
+    contact: str = Form(None),
+    description: str = Form(None),
+    haverford_office: str = Form(None),
+    publish: bool = Form(False),
+    keyword: str = Form(None),
+    type: str = Form(None),
+    area: str = Form(None),
+    language: str = Form(None),
+    region: str = Form(None),
+    subject: str = Form(None),
+    start_date: str = Form(None),
+    end_date: str = Form(None),
+    
+):
+    categories = []
+
+    if type:
+        types = [i.strip() for i in type.split(",")]
+    else:
+        types = []
+    categories.append({"Type": types})
+    if area:
+        areas = [i.strip() for i in area.split(",")]
+    else:
+        areas = []
+    categories.append({"Area": areas})
+    if language:
+        languages = [i.strip() for i in language.split(",")]
+    else:
+        languages = []
+    categories.append({"Language": languages})
+
+    if region:
+        regions = [i.strip() for i in region.split(",")]
+    else:
+        regions = []
+    categories.append({"Region": regions})
+
+    if subject:
+        subjects = [i.strip() for i in subject.split(",")]
+    else:
+        subjects = []
+    categories.append({"Subject": subjects})
+
+    if keyword:
+        keywords = [i.strip() for i in keyword.split(",")]
+    else:
+        keywords = []
+    categories.append({"Keyword": keywords})
+    # item.save()
+    if image_file.filename:
+        p = Path.cwd() / "assets" / "items" / image_file.filename
+        contents = image_file.file.read()
+        p.write_bytes(contents)
+        image_file = image_file.filename
+        item = Item(
+            id=item_id,
+            name=name,
+            lat=lat,
+            long=long,
+            slug=name.lower().replace(" ", "-"),
+            image_file=image_file,
+            organization=organization,
+            contact=contact,
+            description=description,
+            haverford_office=haverford_office,
+            language=language,
+            categories=categories,
+            publish=publish,
+            start_date=start_date,
+            end_date=end_date
+        )
+    else:
+        item = Item(
+            id=item_id,
+            name=name,
+            lat=lat,
+            long=long,
+            slug=name.lower().replace(" ", "-"),
+            image_file=None,
+            organization=organization,
+            contact=contact,
+            description=description,
+            haverford_office=haverford_office,
+            language=language,
+            categories=categories,
+            publish=publish,
+            start_date=start_date,
+            end_date=end_date
+        )
+    
+    p = Path.cwd() / "data" / "items" / (item_id + ".json")
+    srsly.write_json(p, item.dict())
+    #return item.dict()
+
+
+@app.post("/add_item/")
 async def new_item_post(
     request: Request,
     slug: str = None,
@@ -110,7 +219,11 @@ async def new_item_post(
     language: str = Form(None),
     region: str = Form(None),
     subject: str = Form(None),
+    start_date: str = Form(None),
+    end_date: str = Form(None),
+    
 ):
+    
     categories = []
 
     if type:
@@ -166,6 +279,8 @@ async def new_item_post(
             language=language,
             categories=categories,
             publish=publish,
+            start_date=start_date,
+            end_date=end_date
         )
     else:
         item = Item(
@@ -182,7 +297,9 @@ async def new_item_post(
             language=language,
             categories=categories,
             publish=publish,
+            start_date=start_date,
+            end_date=end_date
         )
-    p = Path.cwd() / "data" / "items" / (item.slug + ".json")
-    srsly.write_json(p, item.dict())
-    return item.dict()
+    if item_id:
+        p = Path.cwd() / "data" / "items" / (item_id + ".json")
+        srsly.write_json(p, item.dict())
